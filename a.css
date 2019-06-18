@@ -334,6 +334,7 @@ section.portfolio>h2 {
     font-size: 34px;
     line-height: 1.2;
     font-weight: 600;
+    margin-bottom: 30px;
 }
 
 section.skills h3 {
@@ -382,9 +383,10 @@ section.skills.offset .progress{
 section.portfolio {
     text-align: center;
     margin-bottom: 100px;
+    max-width: 720px;;
 }
 
-section.portfolio>nav {
+/* section.portfolio>nav {
     text-align: center;
 }
 
@@ -438,7 +440,7 @@ section.portfolio>nav .bar.state-2 .bar-inner {
 section.portfolio>nav .bar.state-3 .bar-inner {
     margin-left: 140px;
     width: 96px;
-}
+} */
 
 section.portfolio .works {
     position: relative;
@@ -447,4 +449,26 @@ section.portfolio .works {
 section.portfolio .works>.big,
 section.portfolio .works>.small {
     position: absolute;
+}
+
+.swiper-container {
+    width: 668px;
+    height: 501px;
+}
+.swiper-button-prev{
+    background-color: pink;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+   left: -100px;
+   outline:none;
+}
+.swiper-button-next{
+    background-color: pink;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    right: -100px;
+    border: none;
+    outline:none;
 }
