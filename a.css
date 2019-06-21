@@ -181,7 +181,7 @@ h6 {
 
 .banner {
     height: 515px;
-    background-image: url(./img/rs-cover.jpg);
+    background-image: url(./pic/rs-cover.jpg);
     background-position: center center;
     background-size: cover;
 }
@@ -472,3 +472,72 @@ section.portfolio .works>.small {
     border: none;
     outline:none;
 }
+
+.loading {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+  }
+
+  .loading::before,
+  .loading::after {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background-color: black;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: s 1.5s linear infinite;
+  }
+
+  .loading::after {
+    animation-delay: 0.75s;
+  }
+
+  @keyframes s {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+
+    100% {
+      width: 100px;
+      height: 100px;
+      opacity: 0;
+    }
+  }
+
+  .icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  }
+
+  .site-welcome {
+    display: none;
+    background: #888;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .site-welcome.active {
+    display: flex;
+  }
+
+  #postMessage {
+      width: 700px;
+      margin: 50px auto;
+      border: 1px solid red;
+  }
