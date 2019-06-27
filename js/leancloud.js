@@ -93,14 +93,20 @@
             //     'name': name,
             //     'content': content
             // })
-            this.model.save(name, content).then(function (object) {
-                let li = document.createElement('li')
-                li.innerText = object.attributes.name + ':' + object.attributes.content
-                let messageList = document.querySelector('#messageList')
-                messageList.append(li)
-                myMessage.querySelector('input[name = content]').value = ''
-                myMessage.querySelector('input[name = name]').value = ''
-            })
+            if (content === '') {
+                alert('请输入内容')
+            } else if (name === '') {
+                alert('请输入姓名')
+            } else (
+                this.model.save(name, content).then(function (object) {
+                    let li = document.createElement('li')
+                    li.innerText = object.attributes.name + ':' + object.attributes.content
+                    let messageList = document.querySelector('#messageList')
+                    messageList.append(li)
+                    myMessage.querySelector('input[name = content]').value = ''
+                    myMessage.querySelector('input[name = name]').value = ''
+                })
+            )
         }
     }
 
